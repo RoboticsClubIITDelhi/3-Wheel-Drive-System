@@ -8,8 +8,11 @@
 
 ## 📁 Software Architecture
 
-The software for the Micromouse project is designed with modularity in mind, separating core control functions from maze-solving algorithms.
-
+The software for the 3-Wheeled Drive project contains the following components:
+- Motor Speed Control using a PID controller
+- Kinematics of drive
+- Odometry calculations
+- Position based control using odometry values
 
 
 <div align="center">
