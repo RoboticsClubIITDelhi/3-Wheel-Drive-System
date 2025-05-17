@@ -5,64 +5,42 @@
   <img src="https://img.shields.io/badge/Team-Robotics%20Club-blue" alt="Team: Robotics Club">
   <img src="https://img.shields.io/badge/Platform-Arduino-orange" alt="Platform: Arduino">
   <div align="center">
-    <img src="./photos/foto_1.png" width="600" alt="Project Image">
+    <img src="./photos/3WD.png" width="600" alt="Project Image">
     <br>
-    </h1>Add project specific image on ./photos/foto_1.png</h1> 
   </div>
 </div>
 
 ## 🤖 Project Overview
 
-This repository houses the codebase for the **!TODO(project name)**. It serves as a comprehensive collection of resources including code, CAD models, calculations, and component datasheets. Our aim is to create a well-documented reference that will enable future teams to build upon our work.
+This repository houses the codebase for the **3 Wheel Drive System with Odometry**. It serves as a comprehensive collection of resources including code, CAD models, calculations, and component datasheets. Our aim is to create a well-documented reference that will enable future teams to build upon our work.
 
 ### 🎯 Design Goals
-!ToDo
-
-some sample
-- ✅ Compact design (within 100×100mm)
-- ✅ Efficient corner turning capability
-- ✅ Fast maze-solving algorithm
-- ✅ Differential drive with high-speed motors
+- ✅ Good design (with proper deadwheels)
+- ✅ Efficient movement capabilities
+- ✅ Precise odometry
+- ✅ Omnidrive with high-speed motors
 
 
 ## 🧠 Algorithm Development
-!ToDo()
+Kinematics of the drive have been solved extensively, and odometry calculations are also available.<br>
+Both of these will be implemented.
 
 ## ⏱️ Project Timeline
-Main idea is to build a very very basic version first, probably within 2 weeks and then work on modifying it, (believer me doing otherwise is stupidity...)
-
-### Week 1: Introduction
-- Review the competition rulebook
--  Be familiar with github
--  Brainstorm ideas and design concepts based in the video,
--  Prepare Bill of Materials
--  Draft electronic system diagram
--  !TODO()
-
-
-### Week 2: Hardware Assembly
--  Assemble mechanical components
-- !TODO()
-
-### Week 3: Debugging
--  Hardware and software troubleshooting
--  !TODO()
-
-### Week 4: Algorithm Refinement
--  Enhance hardware robustness
--  !TODO()
-
-### Weeks 5-7: Progressive Enhancements
-- 🔄 Implement iterative improvements (tbd)
-- !TODO()
+The project timeline is divided into two halves:
+1. <h3>Remote Based Drive with Odometry</h3>
+2. <h3>Coordinate Based Drive using Odometry</h3>
+A detailed breakup of these shall be discussed internally.
 
 ## 📚 Resources
 
-### Tools and References (tbd)
-- !TODO()
+### Tools and References 
+- [Kinematics of 3 Wheeled Omnidrive](https://youtu.be/-wzl8XJopgg?si=YZAKnEMM0LUhHZKF)
+- [Intro to Closed Loop Control for motor speed](https://youtu.be/UR0hOmjaHp0?si=LzniFOmYVttuYbI_) 
+- [Odometry calculations](https://youtu.be/ixsxDn_ddLE?si=gyDlhlBjWfkZdKBQ)
 
 ### Development Software
-- !TODO()
+- Arduino IDE (C++)
+- For further implementation, MATLAB or Python might be used.
 
 
 
