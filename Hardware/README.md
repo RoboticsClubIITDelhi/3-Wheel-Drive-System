@@ -3,16 +3,15 @@
 <div align="center">
   <img src="https://img.shields.io/badge/Status-In%20Development-yellow" alt="Status: In Development">
   <img src="https://img.shields.io/badge/Team-Robotics%20Club-blue" alt="Team: Robotics Club">
-  <img src="https://img.shields.io/badge/Dimensions-60×100mm-green" alt="Dimensions: 60×100mm">
+  <img src="https://img.shields.io/badge/Dimensions-300×300mm-green" alt="Dimensions: 300×300mm">
 </div>
 
 ## 🔧 Hardware Specifications
 
-- **Dimensions**: !TODO()
-- **Drive System**: Differential drive 
-- **Sensors**:
-  - !TODO()
-- **Power**: 3.7V LiPo battery
+- **Dimensions**: 300x300mm
+- **Drive System**: 3-Wheeled Omnidrive 
+- **Sensors**: TBD
+- **Power**: 11.1V LiPo battery
 
 ### Adding New CAD Files
 
@@ -23,17 +22,16 @@ When adding new design files, please follow these guidelines:
 4. For 3D printable files, include recommended print settings
 
 ## 🔌 Electronics Design
-!TODO()
 
 ### Base Configuration
-- **Microcontroller**: !TODO()
-- **Motor Driver**: !TODO()
-- **Sensor Interface**: !TODO()
+- **Microcontroller**: Arduino UNO
+- **Motor Driver**: Sabertooth 2x25
 
 
 ## 📋 Bill of Materials
-!TODO()
-[Link to detailed BOM spreadsheet]
+1. DC Motors
+2. Sabertooth Motor Driver
+3. Arduino UNO
 
 ---
 
