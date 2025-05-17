@@ -27,6 +27,8 @@ When adding new design files, please follow these guidelines:
 - **Microcontroller**: Arduino UNO
 - **Motor Driver**: Sabertooth 2x25
 
+## 📚 Resources
+- [Sabertooth and Kangaroo Motion Controller Doc](https://docs.google.com/document/d/1EkBDV2QEI1j1Q3zkU0yQxwSSaxRrwW_y0n51cHygq30/edit?usp=sharing) (Credits: Mahesh Pareek)
 
 ## 📋 Bill of Materials
 1. DC Motors
