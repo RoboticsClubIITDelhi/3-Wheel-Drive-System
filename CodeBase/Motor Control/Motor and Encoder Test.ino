@@ -1,3 +1,9 @@
+// Motor test with Arduino UNO and Cytron MDD10A
+// Motor: RMCS 2083, 18V, 250W, tested at 12V, 4A peak current limitation
+// Motor rotates in one direction for a specified time and then in other direction for the same time
+// Encoder measures the angle of rotation during these rotations
+
+
 const int pwmPin = 6;  // PWM control (speed)
 const int dirPin = 7;  // Direction control
 
