@@ -37,6 +37,7 @@ A detailed breakup of these shall be discussed internally.
 - [Kinematics of 3 Wheeled Omnidrive](https://youtu.be/-wzl8XJopgg?si=YZAKnEMM0LUhHZKF)
 - [Intro to Closed Loop Control for motor speed](https://youtu.be/UR0hOmjaHp0?si=LzniFOmYVttuYbI_) 
 - [Odometry calculations](https://youtu.be/ixsxDn_ddLE?si=gyDlhlBjWfkZdKBQ)
+- [Full Implementation paper By Davide Orrù](https://drive.google.com/file/d/1ZcCbBSR3Ej5LelZVrkgjPPdYrF3NjeZ2/view)
 
 ### Development Software
 - Arduino IDE (C++)
