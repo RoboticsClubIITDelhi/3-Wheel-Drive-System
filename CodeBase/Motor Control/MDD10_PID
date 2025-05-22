@@ -1,0 +1,98 @@
+// ======= Motor Pins =======
+#define DIR_PIN      7
+#define PWM_PIN      6
+#define SWITCH_PIN   13
+
+// ======= Encoder Pins =======
+#define ENCODER_A    2
+#define ENCODER_B    3
+
+// ======= Encoder Variables =======
+volatile long encoderCount = 0;
+long lastEncoderCount = 0;
+
+// ======= Timing =======
+unsigned long lastTime = 0;
+const unsigned long interval = 100; // milliseconds
+
+// ======= Motor Specs =======
+const int pulsesPerRevolution = 119;
+const float gearRatio = 1.0;
+const float intervalInMinutes = interval / 60000.0; // for RPM calculation
+
+// ======= PID Variables =======
+double Setpoint = 0;    // Desired speed (target RPM)
+double Input = 0;       // Measured speed (actual RPM)
+double Output = 0;      // Control output (PWM)
+double error = 0;
+double lastError = 0;
+double integral = 0;
+double derivative = 0;
+
+// ======= PID Tunings =======
+double Kp = 1.0;
+double Ki = 5.0;
+double Kd = 0.0005;
+
+// ======= Encoder ISR =======
+void updateEncoder() {
+  int b = digitalRead(ENCODER_B);
+  if (b == LOW) encoderCount++;
+  else encoderCount--;
+}
+
+void setup() {
+  pinMode(DIR_PIN, OUTPUT);
+  pinMode(PWM_PIN, OUTPUT);
+  pinMode(SWITCH_PIN, INPUT);
+
+  pinMode(ENCODER_A, INPUT_PULLUP);
+  pinMode(ENCODER_B, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(ENCODER_A), updateEncoder, RISING);
+
+  Serial.begin(9600);
+  Serial.println("Enter desired speed in RPM (0–200):");
+}
+
+void loop() {
+  // === User Input ===
+  if (Serial.available()) {
+    int rpmInput = Serial.parseInt();
+    if (rpmInput >= 0 && rpmInput <= 200) {
+      Setpoint = rpmInput;
+      Serial.print("Desired speed (RPM) set to: ");
+      Serial.println(Setpoint);
+    }
+    while (Serial.available()) Serial.read(); // clear any leftover bytes
+  }
+
+  // === PID Loop Every 100 ms ===
+  unsigned long now = millis();
+  if (now - lastTime >= interval) {
+    lastTime = now;
+
+    // === Measure Speed ===
+    long deltaCount = encoderCount - lastEncoderCount;
+    lastEncoderCount = encoderCount;
+    double revolutions = (double)deltaCount / pulsesPerRevolution;
+    Input = (revolutions / intervalInMinutes) / gearRatio;
+
+    // === Compute Error and PID Output ===
+    error = Setpoint - Input;
+    integral += error * (interval / 1000.0); // Integrate over time
+    derivative = (error - lastError) / (interval / 1000.0);
+    Output = Kp * error + Ki * integral + Kd * derivative;
+    Output = constrain(Output, 0, 255); // Limit PWM between 0–255
+    lastError = error;
+
+    // === Apply PWM and Direction ===
+    digitalWrite(DIR_PIN, digitalRead(SWITCH_PIN)); // direction switch
+    analogWrite(PWM_PIN, (int)Output);              // apply PWM
+
+    // === Feedback Report ===
+    Serial.print("Setpoint (RPM): "); Serial.print(Setpoint);
+    Serial.print(" | Measured (RPM): "); Serial.print(Input, 1);
+    Serial.print(" | Error: "); Serial.print(error, 1);
+    Serial.print(" | PWM Output: "); Serial.println((int)Output);
+  }
+}
