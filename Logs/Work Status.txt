@@ -1,0 +1,6 @@
+Until 27-05-25:
+- Done basic disassembly and finalised 3 wheel drive system design without deadwheels
+- Controlled motors with Cytron MDD10A with arduino and Remote control
+- Applied PID controller to control speed precisely for a single motor using Cytron
+- Started work on shifting to Sabertooth motor driver (2x32) and Kangaroo motion controller (x2)
+ 
