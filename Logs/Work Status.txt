@@ -3,4 +3,6 @@ Until 27-05-25:
 - Controlled motors with Cytron MDD10A with arduino and Remote control
 - Applied PID controller to control speed precisely for a single motor using Cytron
 - Started work on shifting to Sabertooth motor driver (2x32) and Kangaroo motion controller (x2)
- 
+Until 01-06-25:
+- Controlling all three motors simultaneously with a remote and Arduino Mega.
+- Testing with power supply done but with battery remains.
