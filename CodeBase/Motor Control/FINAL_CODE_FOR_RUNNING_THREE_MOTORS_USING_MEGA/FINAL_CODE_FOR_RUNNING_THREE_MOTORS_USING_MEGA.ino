@@ -75,7 +75,7 @@ void loop() {
   else if (abs(w) > 0.1 && abs(vy) < 0.1 && abs(vx) < 0.1) {
     
     float w3=(w)*300;
-    float w1=(w)*300;
+    float w1=(-w)*300;
     float w2=(w)*300;
     wheel1.s(w1);
     wheel2.s(w2);
