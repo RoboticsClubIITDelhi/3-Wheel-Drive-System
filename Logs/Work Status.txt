@@ -6,3 +6,7 @@ Until 27-05-25:
 Until 01-06-25:
 - Controlling all three motors simultaneously with a remote and Arduino Mega.
 - Testing with power supply done but with battery remains.
+On 16-06-2025
+- System currently not working.
+- Tried fixing the system by tuning the Kangaroo PID controllers.
+- System still not working.
