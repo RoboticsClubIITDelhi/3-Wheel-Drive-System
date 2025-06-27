@@ -10,3 +10,9 @@ On 16-06-2025
 - System currently not working.
 - Tried fixing the system by tuning the Kangaroo PID controllers.
 - System still not working.
+Until 27-06-2025
+- Robot is now working (the issue was identified in one motor driver)
+- Replacing one Sabertooth 2x32 motor driver with a Sabertooth 2x25, which will now control two motors.
+- Applied fail-safe mechanism to stop robot on signal loss or critical fault detection.
+- All core movement systems tested and confirmed functional.
+- Working on mounts .
