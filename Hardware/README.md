@@ -24,8 +24,8 @@ When adding new design files, please follow these guidelines:
 ## 🔌 Electronics Design
 
 ### Base Configuration
-- **Microcontroller**: Arduino UNO
-- **Motor Driver**: Sabertooth 2x25
+- **Microcontroller**: Arduino Mega
+- **Motor Driver**: Sabertooth 2x25 and Sabertooth 2x32
 
 ## 📚 Resources
 - [Sabertooth and Kangaroo Motion Controller Doc](https://docs.google.com/document/d/1EkBDV2QEI1j1Q3zkU0yQxwSSaxRrwW_y0n51cHygq30/edit?usp=sharing) (Credits: Mahesh Pareek)
@@ -33,7 +33,7 @@ When adding new design files, please follow these guidelines:
 ## 📋 Bill of Materials
 1. DC Motors
 2. Sabertooth Motor Driver
-3. Arduino UNO
+3. Arduino Mega
 
 ---
 
