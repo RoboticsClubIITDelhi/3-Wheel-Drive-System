@@ -1,7 +1,7 @@
 # Robotics Summer Project 2025-26
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Status-In%20Development-yellow" alt="Status: In Development">
+  <img src="https://img.shields.io/badge/Status-In%20Development-yellow" alt="Status: Completed">
   <img src="https://img.shields.io/badge/Team-Robotics%20Club-blue" alt="Team: Robotics Club">
   <img src="https://img.shields.io/badge/Platform-Arduino-orange" alt="Platform: Arduino">
   <div align="center">
